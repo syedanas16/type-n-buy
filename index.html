@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="TYPE N BUY — premium tech, smart gadgets, audio, power accessories and mobile essentials across Pakistan.">
 <title>TYPE N BUY — Premium Tech Store</title>
-<link rel="icon" type="image/png" href="Logo.png">
 
 <style>
 :root{
@@ -1177,7 +1176,7 @@ footer ul{list-style:none}
 /* =========================================================
    TYPE N BUY — PREMIUM / ADVANCED UI SYSTEM
    ========================================================= */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap');
 
 :root{
   --orange:#ff5a00;
@@ -3123,829 +3122,9 @@ select{
 }
 </style>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-<style>
-
-/* =========================================================
-   TYPE N BUY — FINAL PREMIUM POLISH
-   UI-only enhancements; existing product/cart/order logic preserved.
-   ========================================================= */
-
-:root{
-  --premium-orange:#ff5a00;
-  --premium-orange-soft:#fff2ea;
-  --premium-ink:#0d0f12;
-  --premium-border:rgba(15,18,24,.09);
-  --premium-shadow:0 18px 55px rgba(15,18,24,.10);
-}
-
-::selection{
-  background:var(--premium-orange);
-  color:#fff;
-}
-
-body{
-  min-height:100vh;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
-
-header{
-  transition:box-shadow .25s ease, background .25s ease, transform .25s ease;
-}
-
-header.is-scrolled{
-  box-shadow:0 16px 40px rgba(0,0,0,.18);
-}
-
-.nav{
-  position:relative;
-}
-
-.logo{
-  transition:transform .2s ease, filter .2s ease;
-}
-
-.logo:hover{
-  transform:translateY(-1px);
-  filter:brightness(1.04);
-}
-
-.search input::selection{
-  background:#ffd4bf;
-  color:#111;
-}
-
-.searchSuggestion{
-  cursor:pointer;
-}
-
-.heroMain{
-  isolation:isolate;
-}
-
-.heroMain:before{
-  z-index:-1;
-}
-
-.heroText h1{
-  text-wrap:balance;
-}
-
-.heroText h1 strong,
-.heroText h1 b{
-  background:linear-gradient(90deg,#fff,#ffd4c1);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-
-.cta,
-.saleBtn,
-.actions button,
-.detailBtns button,
-.cartModal .buy,
-.orderModal .buy,
-.cartBtn,
-.close,
-.clearBtn,
-.cat,
-.select{
-  -webkit-tap-highlight-color:transparent;
-}
-
-.cta:focus-visible,
-.saleBtn:focus-visible,
-.actions button:focus-visible,
-.detailBtns button:focus-visible,
-.cartModal .buy:focus-visible,
-.orderModal .buy:focus-visible,
-.cartBtn:focus-visible,
-.close:focus-visible,
-.clearBtn:focus-visible,
-.cat:focus-visible,
-.select:focus-visible,
-.searchClear:focus-visible,
-.searchSubmit:focus-visible{
-  outline:3px solid rgba(255,90,0,.28);
-  outline-offset:2px;
-}
-
-.card{
-  will-change:transform;
-}
-
-.card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:inherit;
-  pointer-events:none;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);
-}
-
-.pic{
-  overflow:hidden;
-}
-
-.pic::after{
-  content:"";
-  position:absolute;
-  left:12%;
-  right:12%;
-  bottom:8px;
-  height:18px;
-  border-radius:50%;
-  background:rgba(0,0,0,.07);
-  filter:blur(12px);
-  opacity:.65;
-  pointer-events:none;
-}
-
-.pic img{
-  position:relative;
-  z-index:1;
-}
-
-.badge{
-  backdrop-filter:blur(8px);
-}
-
-.wish{
-  cursor:pointer;
-}
-
-.wish:active{
-  transform:scale(.94);
-}
-
-.actions button:active,
-.detailBtns button:active,
-.saleBtn:active,
-.cta:active{
-  transform:translateY(1px);
-}
-
-.shopHead h2{
-  position:relative;
-}
-
-.shopHead h2::after,
-.catHeader h2::after{
-  content:"";
-  display:inline-block;
-  width:34px;
-  height:4px;
-  margin-left:9px;
-  vertical-align:middle;
-  border-radius:999px;
-  background:linear-gradient(90deg,#ff5a00,#ff9a65);
-}
-
-.filters{
-  scrollbar-width:thin;
-}
-
-.filters input[type="checkbox"]{
-  width:15px;
-  height:15px;
-}
-
-.trustItem,
-.cat,
-.sideDeal,
-.saleBox,
-.card,
-.filters,
-.modal{
-  transform:translateZ(0);
-}
-
-.modal{
-  overscroll-behavior:contain;
-}
-
-.toast{
-  max-width:min(420px,calc(100vw - 30px));
-  line-height:1.45;
-}
-
-#backTop{
-  backdrop-filter:blur(12px);
-}
-
-@media(max-width:900px){
-  .heroMain{
-    overflow:hidden;
-  }
-
-  .heroMain::after{
-    opacity:.8;
-  }
-
-  .shopHead h2::after,
-  .catHeader h2::after{
-    width:24px;
-    height:3px;
-  }
-}
-
-@media(max-width:650px){
-  .container{
-    padding-left:12px;
-    padding-right:12px;
-  }
-
-  .heroMain{
-    border-radius:20px;
-  }
-
-  .card{
-    border-radius:16px;
-  }
-
-  .pic::after{
-    left:18%;
-    right:18%;
-  }
-
-  #backTop{
-    right:16px;
-    bottom:88px;
-  }
-}
-
-@media(prefers-reduced-motion:reduce){
-  *,
-  *::before,
-  *::after{
-    scroll-behavior:auto !important;
-    animation-duration:.001ms !important;
-    animation-iteration-count:1 !important;
-    transition-duration:.001ms !important;
-  }
-}
-
-</style>
-<style>
-/* ===== TYPE N BUY FINAL PRODUCT DETAIL POLISH ===== */
-/* Orange quantity controls to match the store theme */
-.qtyBox{border-color:#ff5a00 !important}
-.qtyBox button{background:#ff5a00 !important;color:#fff !important}
-.qtyBox button:hover{background:#e84d00 !important}
-.qtyBox span{color:#222 !important}
-
-/* Orange flash-sale bar */
-.saleTimer{
-  background:#ff5a00 !important;
-  color:#fff !important;
-  border:1px solid #ff5a00 !important;
-}
-.saleTimer strong,.saleTimer b,.saleTimer small{color:#fff !important}
-
-/* Product thumbnails: vertical column on the LEFT, like the reference */
-@media(min-width:901px){
-  .productGalleryPanel{
-    display:grid !important;
-    grid-template-columns:82px minmax(0,1fr) !important;
-    grid-template-rows:minmax(0,510px) auto !important;
-    grid-template-areas:
-      "thumbs stage"
-      "counter counter" !important;
-    column-gap:14px !important;
-    align-items:start !important;
-    padding:10px 28px 30px 0 !important;
-  }
-  .productGalleryPanel .productImageStage{
-    grid-area:stage !important;
-    width:100% !important;
-    height:510px !important;
-  }
-  .productGalleryPanel .gallery{
-    grid-area:thumbs !important;
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center !important;
-    gap:9px !important;
-    width:82px !important;
-    height:510px !important;
-    margin:0 !important;
-    padding:0 2px !important;
-    overflow-y:auto !important;
-    overflow-x:hidden !important;
-    scrollbar-width:thin !important;
-  }
-  .productGalleryPanel .thumb{
-    width:76px !important;
-    height:76px !important;
-    min-width:76px !important;
-    min-height:76px !important;
-    flex:0 0 76px !important;
-    padding:4px !important;
-    background:#fff !important;
-    border:1px solid #ddd !important;
-    border-radius:5px !important;
-  }
-  .productGalleryPanel .thumb.active{
-    border:2px solid #ff5a00 !important;
-    box-shadow:0 0 0 1px rgba(255,90,0,.12) !important;
-  }
-  .productGalleryPanel .thumb img{
-    width:100% !important;
-    height:100% !important;
-    object-fit:contain !important;
-    display:block !important;
-  }
-  .productGalleryPanel .counter{
-    grid-area:counter !important;
-    width:100% !important;
-    margin-top:6px !important;
-  }
-}
-
-@media(max-width:900px){
-  .productGalleryPanel .gallery{
-    display:flex !important;
-    flex-direction:row !important;
-    overflow-x:auto !important;
-    overflow-y:hidden !important;
-    width:100% !important;
-    height:auto !important;
-  }
-}
-</style>
-
-<style id="daraz-marketplace-upgrade">
-/* ===== DARAZ-STYLE MARKETPLACE UPGRADE ===== */
-:root{
-  --market-orange:#f85606;
-  --market-orange-2:#ff6a00;
-  --market-orange-soft:#fff1e8;
-  --market-bg:#f5f5f5;
-  --market-card:#fff;
-  --market-text:#222;
-  --market-muted:#757575;
-  --market-border:#e8e8e8;
-  --market-green:#18a058;
-  --market-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-html,body{background:var(--market-bg)!important;color:var(--market-text)}
-body{font-family:Inter,Arial,sans-serif}
-
-/* Marketplace top bar */
-.market-top-strip{
-  background:var(--market-orange);
-  color:#fff;
-  font-size:12px;
-  min-height:30px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:6px 18px;
-}
-.market-top-strip .market-top-inner{
-  width:min(1200px,94%);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-}
-.market-top-strip a{color:#fff;text-decoration:none;opacity:.96}
-.market-top-strip a:hover{opacity:1;text-decoration:underline}
-
-/* Header */
-header,.header,.site-header,.navbar{
-  background:#fff!important;
-  box-shadow:0 1px 7px rgba(0,0,0,.09)!important;
-  border-bottom:1px solid #eee!important;
-}
-header.scrolled{box-shadow:0 3px 16px rgba(0,0,0,.12)!important}
-.market-header-wrap{
-  width:min(1200px,94%);
-  margin:auto;
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-.market-logo{
-  font-weight:900;
-  letter-spacing:-1px;
-  color:var(--market-orange);
-  font-size:27px;
-  white-space:nowrap;
-}
-.market-search{
-  flex:1;
-  height:46px;
-  display:flex;
-  align-items:center;
-  background:#f6f6f6;
-  border:1px solid #eee;
-  border-radius:3px;
-  overflow:hidden;
-}
-.market-search input{
-  flex:1;
-  height:100%;
-  border:0!important;
-  outline:0!important;
-  background:transparent!important;
-  padding:0 16px!important;
-  box-shadow:none!important;
-}
-.market-search button{
-  width:58px;
-  height:100%;
-  border:0!important;
-  background:var(--market-orange)!important;
-  color:#fff!important;
-  border-radius:0!important;
-  display:grid;
-  place-items:center;
-  cursor:pointer;
-}
-.market-cart{
-  width:46px;height:46px;
-  display:grid;place-items:center;
-  color:#333;
-  font-size:22px;
-  cursor:pointer;
-}
-.market-account{
-  display:flex;align-items:center;gap:8px;
-  font-size:13px;color:#333;
-  white-space:nowrap;
-}
-
-/* Main marketplace width */
-main,.main,.container,.content,.page-container{
-  max-width:1200px!important;
-  margin-left:auto!important;
-  margin-right:auto!important;
-}
-
-/* Hero / category area */
-.market-hero-grid{
-  display:grid;
-  grid-template-columns:220px 1fr;
-  gap:12px;
-  margin:14px auto;
-  width:min(1200px,94%);
-}
-.market-side-cats{
-  background:#fff;
-  border-radius:3px;
-  box-shadow:var(--market-shadow);
-  padding:8px 0;
-}
-.market-side-cats a{
-  display:flex;align-items:center;
-  min-height:38px;
-  padding:0 15px;
-  color:#333!important;
-  text-decoration:none!important;
-  font-size:13px;
-  transition:.15s ease;
-}
-.market-side-cats a:hover{
-  background:#fff1e8;
-  color:var(--market-orange)!important;
-}
-.market-hero{
-  min-height:300px;
-  border-radius:3px;
-  overflow:hidden;
-  box-shadow:var(--market-shadow);
-  background:#fff;
-}
-
-/* Section headings */
-section{scroll-margin-top:100px}
-.section-title,.section-heading,.products-title{
-  font-size:22px!important;
-  font-weight:700!important;
-  color:#333!important;
-}
-.section-title:after,.section-heading:after{
-  background:var(--market-orange)!important;
-}
-
-/* Product grid */
-.products-grid,.product-grid,.products{
-  gap:10px!important;
-}
-.product-card,.product,.card{
-  background:#fff!important;
-  border:1px solid #eee!important;
-  border-radius:2px!important;
-  box-shadow:none!important;
-  overflow:hidden;
-  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease!important;
-}
-.product-card:hover,.product:hover,.card:hover{
-  transform:translateY(-3px)!important;
-  box-shadow:0 5px 18px rgba(0,0,0,.13)!important;
-  border-color:#ddd!important;
-}
-.product-card img,.product img,.card img{
-  background:#fff!important;
-}
-.product-card .price,.product .price,.card .price{
-  color:var(--market-orange)!important;
-  font-size:20px!important;
-  font-weight:700!important;
-}
-.product-card .old-price,.product .old-price,.card .old-price{
-  color:#999!important;
-  font-size:12px!important;
-}
-.product-card .discount,.discount,.sale-badge{
-  color:var(--market-orange)!important;
-}
-.badge,.tag{
-  border-radius:2px!important;
-}
-
-/* Flash sale */
-.flash-sale,.sale-section,.deal-section{
-  background:#fff!important;
-  border-radius:3px!important;
-  box-shadow:var(--market-shadow)!important;
-}
-.flash-sale .heading,.sale-section .heading{
-  color:var(--market-orange)!important;
-}
-.sale-timer,.countdown{
-  background:#222!important;
-  color:#fff!important;
-  border-radius:2px!important;
-}
-
-/* Filter / sort row */
-.filter-bar,.filters,.sort-bar{
-  background:#fff!important;
-  border:1px solid #eee!important;
-  box-shadow:none!important;
-  border-radius:2px!important;
-}
-.filter-bar button,.filters button,.sort-bar button{
-  border-radius:2px!important;
-}
-.filter-bar button.active,.filters button.active,.sort-bar button.active{
-  color:var(--market-orange)!important;
-  border-color:var(--market-orange)!important;
-  background:#fff!important;
-}
-
-/* Buttons */
-button,.btn,.button{
-  border-radius:3px!important;
-}
-.btn-primary,.primary,.add-to-cart,.buy-now{
-  background:var(--market-orange)!important;
-  border-color:var(--market-orange)!important;
-  color:#fff!important;
-}
-.btn-primary:hover,.primary:hover,.add-to-cart:hover,.buy-now:hover{
-  background:#d94d00!important;
-  border-color:#d94d00!important;
-}
-.btn-secondary{
-  color:var(--market-orange)!important;
-  border-color:var(--market-orange)!important;
-  background:#fff!important;
-}
-
-/* Trust strip */
-.trust,.trust-section,.features{
-  background:#fff!important;
-  border-top:1px solid #eee!important;
-  border-bottom:1px solid #eee!important;
-}
-.trust-item,.feature{
-  color:#444!important;
-}
-
-/* Footer */
-footer{
-  background:#2e2e2e!important;
-  color:#ddd!important;
-}
-footer a{color:#ddd!important}
-footer a:hover{color:#fff!important}
-
-/* Product detail */
-.product-detail,.product-details,.detail-page{
-  background:#fff!important;
-  border-radius:3px!important;
-  box-shadow:var(--market-shadow)!important;
-}
-.quantity button{
-  color:#333!important;
-  background:#fff!important;
-  border-color:#ddd!important;
-}
-.quantity input{
-  border-color:#ddd!important;
-}
-
-/* Toasts / modals */
-.modal-content,.modal-box,.dialog{
-  border-radius:4px!important;
-  box-shadow:0 12px 40px rgba(0,0,0,.22)!important;
-}
-.toast,.notification{
-  border-left:4px solid var(--market-orange)!important;
-}
-
-/* Mobile */
-@media(max-width:850px){
-  .market-top-strip .market-top-inner{justify-content:center}
-  .market-top-strip .market-hide-mobile{display:none}
-  .market-header-wrap{gap:9px;min-height:64px}
-  .market-logo{font-size:21px}
-  .market-account{display:none}
-  .market-search{height:40px}
-  .market-cart{width:40px;height:40px}
-  .market-hero-grid{grid-template-columns:1fr;width:96%}
-  .market-side-cats{display:none}
-}
-@media(max-width:560px){
-  .products-grid,.product-grid,.products{
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    gap:7px!important;
-  }
-  .product-card .price,.product .price,.card .price{font-size:17px!important}
-}
-</style>
-
-
-<style id="type-n-buy-header-fix">
-/* ===== FIX: TYPE N BUY LOGO + SEARCH HEADER ===== */
-header{
-  background:#fff !important;
-  color:#222 !important;
-  box-shadow:0 2px 10px rgba(0,0,0,.08) !important;
-  border-bottom:1px solid #eeeeee !important;
-}
-header .nav{
-  max-width:1400px !important;
-  height:72px !important;
-  margin:0 auto !important;
-  padding:0 16px !important;
-  display:flex !important;
-  align-items:center !important;
-  gap:20px !important;
-}
-header .logo{
-  display:flex !important;
-  flex-direction:column !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  min-width:170px !important;
-  color:#f85606 !important;
-  font-family:Arial,Helvetica,sans-serif !important;
-  font-size:29px !important;
-  line-height:1 !important;
-  font-weight:900 !important;
-  letter-spacing:-1.4px !important;
-  text-decoration:none !important;
-  text-shadow:none !important;
-  opacity:1 !important;
-  visibility:visible !important;
-}
-header .logo small{
-  display:block !important;
-  margin-top:5px !important;
-  color:#777 !important;
-  opacity:1 !important;
-  font-size:8px !important;
-  line-height:1 !important;
-  letter-spacing:2.8px !important;
-  font-weight:800 !important;
-}
-header .search{
-  flex:1 1 auto !important;
-  width:auto !important;
-  max-width:none !important;
-  height:46px !important;
-  min-width:240px !important;
-  background:#f7f7f7 !important;
-  border:1px solid #e2e2e2 !important;
-  border-radius:4px !important;
-  box-shadow:none !important;
-  transform:none !important;
-}
-header .search input{
-  color:#222 !important;
-  background:transparent !important;
-  font-size:14px !important;
-}
-header .search input::placeholder{
-  color:#999 !important;
-  opacity:1 !important;
-}
-header .searchSubmit{
-  width:58px !important;
-  height:100% !important;
-  background:#fff0e8 !important;
-  color:#f85606 !important;
-  border:0 !important;
-  border-radius:0 4px 4px 0 !important;
-}
-header .searchSubmit svg{
-  stroke:#f85606 !important;
-}
-header .navlinks{
-  flex:0 0 auto !important;
-  margin-left:0 !important;
-  display:flex !important;
-  align-items:center !important;
-  gap:14px !important;
-}
-header .navlinks a{
-  color:#333 !important;
-  font-size:13px !important;
-  font-weight:700 !important;
-  text-decoration:none !important;
-}
-header .cartBtn{
-  color:#333 !important;
-  background:transparent !important;
-  box-shadow:none !important;
-}
-header .cartBadge{
-  background:#f85606 !important;
-  color:#fff !important;
-  border-color:#fff !important;
-}
-
-/* Keep the orange marketplace strip directly below the main header */
-.marketStrip{
-  background:#fff !important;
-  color:#333 !important;
-  border-top:1px solid #f0f0f0 !important;
-  border-bottom:1px solid #e8e8e8 !important;
-}
-.marketStripInner span:first-child{
-  color:#f85606 !important;
-  font-weight:800 !important;
-}
-
-@media(max-width:850px){
-  header .nav{
-    height:auto !important;
-    min-height:64px !important;
-    padding:9px 12px !important;
-    gap:10px !important;
-    flex-wrap:wrap !important;
-  }
-  header .logo{
-    min-width:145px !important;
-    font-size:23px !important;
-  }
-  header .search{
-    order:3 !important;
-    flex-basis:100% !important;
-    min-width:0 !important;
-    height:42px !important;
-  }
-}
-@media(max-width:600px){
-  header .logo{
-    min-width:125px !important;
-    font-size:20px !important;
-  }
-  header .logo small{
-    font-size:6px !important;
-    letter-spacing:2px !important;
-  }
-}
-</style>
-
 </head>
 
 <body>
-
-<!-- DARAZ-STYLE MARKETPLACE TOP BAR -->
-<div class="market-top-strip" id="marketTopStrip">
-  <div class="market-top-inner">
-    <div>
-      <a href="#products">Save More on App</a>
-      <span class="market-hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-      <a href="#products" class="market-hide-mobile">Sell on TYPE N BUY</a>
-    </div>
-    <div>
-      <a href="#orders">Track My Order</a>
-      <span class="market-hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-      <a href="#help" class="market-hide-mobile">Help &amp; Support</a>
-    </div>
-  </div>
-</div>
-
 
 <div class="topbar">
  <div class="container">
@@ -5253,7 +4432,59 @@ const P=[
 ]]
 ];
 
-
+// === 50 NEW TYPE N BUY PRODUCTS ===
+P.push(
+["hp01","ProBass X1 Wireless Headphones","Audio",4499,["https://loremflickr.com/800/800/wireless,headphones?lock=8011","https://loremflickr.com/800/800/wireless,headphones?lock=8012","https://loremflickr.com/800/800/wireless,headphones?lock=8013","https://loremflickr.com/800/800/wireless,headphones?lock=8014"],"Premium over-ear wireless headphones for music, movies and gaming.",["Bluetooth 5.3","Deep bass","Foldable design","Up to 20h playback"]],
+["hp02","SoundMax H7 ANC Headphones","Audio",6999,["https://loremflickr.com/800/800/noise,cancelling,headphones?lock=8021","https://loremflickr.com/800/800/noise,cancelling,headphones?lock=8022","https://loremflickr.com/800/800/noise,cancelling,headphones?lock=8023","https://loremflickr.com/800/800/noise,cancelling,headphones?lock=8024"],"Comfortable ANC headphones with immersive sound for everyday listening.",["Active noise cancellation","Bluetooth","Soft ear cushions","Long battery life"]],
+["hp03","BeatCore B20 Bluetooth Headphones","Audio",3299,["https://loremflickr.com/800/800/bluetooth,headphones?lock=8031","https://loremflickr.com/800/800/bluetooth,headphones?lock=8032","https://loremflickr.com/800/800/bluetooth,headphones?lock=8033","https://loremflickr.com/800/800/bluetooth,headphones?lock=8034"],"Lightweight Bluetooth headphones with a modern look and clear audio.",["Bluetooth wireless","Built-in mic","Foldable","Clear stereo sound"]],
+["hp04","BassBoom Pro Wireless Headset","Audio",5599,["https://loremflickr.com/800/800/over,ear,headphones?lock=8041","https://loremflickr.com/800/800/over,ear,headphones?lock=8042","https://loremflickr.com/800/800/over,ear,headphones?lock=8043","https://loremflickr.com/800/800/over,ear,headphones?lock=8044"],"Powerful bass wireless headset designed for music and entertainment.",["Powerful bass","Wireless audio","Comfort fit","Hands-free calls"]],
+["hp05","GamerX H9 Gaming Headphones","Audio",7499,["https://loremflickr.com/800/800/gaming,headphones?lock=8051","https://loremflickr.com/800/800/gaming,headphones?lock=8052","https://loremflickr.com/800/800/gaming,headphones?lock=8053","https://loremflickr.com/800/800/gaming,headphones?lock=8054"],"Gaming-focused headset with a comfortable fit and detailed sound.",["Gaming audio","Adjustable headband","Built-in microphone","Comfort ear pads"]],
+["pb01","VoltGo 10000mAh Power Bank","Power",2999,["https://loremflickr.com/800/800/power,bank?lock=8061","https://loremflickr.com/800/800/power,bank?lock=8062","https://loremflickr.com/800/800/power,bank?lock=8063","https://loremflickr.com/800/800/power,bank?lock=8064"],"Compact 10000mAh power bank for everyday charging on the go.",["10000mAh capacity","Dual USB output","LED indicator","Portable body"]],
+["pb02","PowerMax 20000mAh Fast Charge","Power",4499,["https://loremflickr.com/800/800/fast,charge,power,bank,product?lock=90001","https://loremflickr.com/800/800/20000mah,power,bank?lock=90002","https://loremflickr.com/800/800/usb,c,power,bank?lock=90003","https://loremflickr.com/800/800/portable,fast,charger?lock=90004"],"High-capacity power bank with fast charging support for daily travel.",["20000mAh capacity","Fast charging","Dual output","Travel friendly"]],
+["pb03","MagCharge Mini 5000mAh","Power",3499,["https://loremflickr.com/800/800/magnetic,power,bank,product?lock=90011","https://loremflickr.com/800/800/magsafe,power,bank?lock=90012","https://loremflickr.com/800/800/slim,magnetic,charger?lock=90013","https://loremflickr.com/800/800/wireless,power,bank?lock=90014"],"Slim magnetic power bank made for convenient portable charging.",["5000mAh capacity","Magnetic charging","Slim body","USB-C input"]],
+["pb04","TurboCell 30000mAh Power Bank","Power",6499,["https://loremflickr.com/800/800/large,power,bank,product?lock=90021","https://loremflickr.com/800/800/30000mah,power,bank?lock=90022","https://loremflickr.com/800/800/high,capacity,charger?lock=90023","https://loremflickr.com/800/800/power,bank,travel?lock=90024"],"Large-capacity portable charger for phones, tablets and accessories.",["30000mAh capacity","Multiple outputs","USB-C input","Digital display"]],
+["pb05","PocketPower 10000 Pro","Power",3799,["https://loremflickr.com/800/800/compact,power,bank,product?lock=90031","https://loremflickr.com/800/800/10000mah,power,bank?lock=90032","https://loremflickr.com/800/800/pocket,power,bank?lock=90033","https://loremflickr.com/800/800/portable,charger?lock=90034"],"Portable fast-charging power bank with a premium compact finish.",["10000mAh capacity","Fast output","Compact design","Overcharge protection"]],
+["mic01","VoxPro USB Condenser Mic","Mic",5499,["https://loremflickr.com/800/800/dual,wireless,microphone?lock=90171","https://loremflickr.com/800/800/wireless,mic,kit?lock=90172","https://loremflickr.com/800/800/two,microphones,studio?lock=90173","https://loremflickr.com/800/800/wireless,microphone,kit?lock=90174"],"USB condenser microphone for voice recording, streaming and online calls.",["USB plug and play","Condenser capsule","Desktop stand","Clear voice pickup"]],
+["mic02","StreamCast M1 RGB Microphone","Mic",6499,["https://loremflickr.com/800/800/rgb,studio,microphone?lock=90181","https://loremflickr.com/800/800/rgb,usb,microphone?lock=90182","https://loremflickr.com/800/800/streaming,microphone,rgb?lock=90183","https://loremflickr.com/800/800/desktop,streaming,mic?lock=90184"],"RGB desktop microphone built for gaming, streaming and voice chat.",["RGB lighting","USB connection","Mute control","Desktop stand"]],
+["mic03","KaraokeBeat K8 Wireless Mic","Mic",3999,["https://loremflickr.com/800/800/wireless,microphone?lock=8131","https://loremflickr.com/800/800/wireless,microphone?lock=8132","https://loremflickr.com/800/800/wireless,microphone?lock=8133","https://loremflickr.com/800/800/wireless,microphone?lock=8134"],"Wireless microphone for karaoke, presentations and casual performances.",["Wireless receiver","Clear vocals","Portable","Easy setup"]],
+["mic04","StudioVoice S2 Lavalier Mic","Mic",2999,["https://loremflickr.com/800/800/lavalier,microphone?lock=8141","https://loremflickr.com/800/800/lavalier,microphone?lock=8142","https://loremflickr.com/800/800/lavalier,microphone?lock=8143","https://loremflickr.com/800/800/lavalier,microphone?lock=8144"],"Compact clip-on microphone for videos, interviews and presentations.",["Clip-on design","Noise reduction","Lightweight","Long cable"]],
+["mic05","ProTalk Dual Wireless Mic Kit","Mic",8999,["https://loremflickr.com/800/800/dual,wireless,microphone?lock=8151","https://loremflickr.com/800/800/dual,wireless,microphone?lock=8152","https://loremflickr.com/800/800/dual,wireless,microphone?lock=8153","https://loremflickr.com/800/800/dual,wireless,microphone?lock=8154"],"Dual wireless microphone kit for two-person videos, interviews and events.",["Two transmitters","Wireless receiver","Low-latency audio","Charging case"]],
+["sp01","BassBox Mini Bluetooth Speaker","Audio",2999,["https://loremflickr.com/800/800/bluetooth,speaker?lock=8161","https://loremflickr.com/800/800/bluetooth,speaker?lock=8162","https://loremflickr.com/800/800/bluetooth,speaker?lock=8163","https://loremflickr.com/800/800/bluetooth,speaker?lock=8164"],"Portable Bluetooth speaker with clear sound for home, travel and entertainment.",["Bluetooth wireless","Portable design","Rechargeable battery","Clear sound"]],
+["sp02","BoomBeat S10 Portable Speaker","Audio",4499,["https://loremflickr.com/800/800/portable,speaker?lock=8171","https://loremflickr.com/800/800/portable,speaker?lock=8172","https://loremflickr.com/800/800/portable,speaker?lock=8173","https://loremflickr.com/800/800/portable,speaker?lock=8174"],"Portable Bluetooth speaker with clear sound for home, travel and entertainment.",["Bluetooth wireless","Portable design","Rechargeable battery","Clear sound"]],
+["sp03","SoundCube RGB Party Speaker","Audio",6999,["https://loremflickr.com/800/800/rgb,speaker?lock=8181","https://loremflickr.com/800/800/rgb,speaker?lock=8182","https://loremflickr.com/800/800/rgb,speaker?lock=8183","https://loremflickr.com/800/800/rgb,speaker?lock=8184"],"Portable Bluetooth speaker with clear sound for home, travel and entertainment.",["Bluetooth wireless","Portable design","Rechargeable battery","Clear sound"]],
+["sp04","WavePro X5 Wireless Speaker","Audio",5299,["https://loremflickr.com/800/800/wireless,speaker?lock=8191","https://loremflickr.com/800/800/wireless,speaker?lock=8192","https://loremflickr.com/800/800/wireless,speaker?lock=8193","https://loremflickr.com/800/800/wireless,speaker?lock=8194"],"Portable Bluetooth speaker with clear sound for home, travel and entertainment.",["Bluetooth wireless","Portable design","Rechargeable battery","Clear sound"]],
+["sp05","MegaBass M20 Party Speaker","Audio",9999,["https://loremflickr.com/800/800/party,speaker?lock=8201","https://loremflickr.com/800/800/party,speaker?lock=8202","https://loremflickr.com/800/800/party,speaker?lock=8203","https://loremflickr.com/800/800/party,speaker?lock=8204"],"Portable Bluetooth speaker with clear sound for home, travel and entertainment.",["Bluetooth wireless","Portable design","Rechargeable battery","Clear sound"]],
+["sp06","PocketBoom Mini Speaker","Audio",2499,["https://loremflickr.com/800/800/mini,speaker?lock=8211","https://loremflickr.com/800/800/mini,speaker?lock=8212","https://loremflickr.com/800/800/mini,speaker?lock=8213","https://loremflickr.com/800/800/mini,speaker?lock=8214"],"Portable Bluetooth speaker with clear sound for home, travel and entertainment.",["Bluetooth wireless","Portable design","Rechargeable battery","Clear sound"]],
+["sp07","ThunderBeat T12 Bluetooth Speaker","Audio",5999,["https://loremflickr.com/800/800/bluetooth,speaker,product?lock=90041","https://loremflickr.com/800/800/portable,speaker,outdoor?lock=90042","https://loremflickr.com/800/800/wireless,speaker,music?lock=90043","https://loremflickr.com/800/800/bluetooth,speaker,desk?lock=90044"],"Portable Bluetooth speaker with clear sound for home, travel and entertainment.",["Bluetooth wireless","Portable design","Rechargeable battery","Clear sound"]],
+["sp08","GlowSound RGB Speaker","Audio",4799,["https://loremflickr.com/800/800/rgb,speaker,product?lock=90051","https://loremflickr.com/800/800/led,bluetooth,speaker?lock=90052","https://loremflickr.com/800/800/rgb,wireless,speaker?lock=90053","https://loremflickr.com/800/800/colorful,bluetooth,speaker?lock=90054"],"Portable Bluetooth speaker with clear sound for home, travel and entertainment.",["Bluetooth wireless","Portable design","Rechargeable battery","Clear sound"]],
+["sp09","ArenaBass A30 Party Speaker","Audio",11999,["https://loremflickr.com/800/800/party,speaker,product?lock=90061","https://loremflickr.com/800/800/large,bluetooth,speaker?lock=90062","https://loremflickr.com/800/800/party,bluetooth,speaker?lock=90063","https://loremflickr.com/800/800/portable,party,speaker?lock=90064"],"Portable Bluetooth speaker with clear sound for home, travel and entertainment.",["Bluetooth wireless","Portable design","Rechargeable battery","Clear sound"]],
+["sp10","TravelSound Go Speaker","Audio",3599,["https://loremflickr.com/800/800/travel,bluetooth,speaker?lock=8251","https://loremflickr.com/800/800/travel,bluetooth,speaker?lock=8252","https://loremflickr.com/800/800/travel,bluetooth,speaker?lock=8253","https://loremflickr.com/800/800/travel,bluetooth,speaker?lock=8254"],"Portable Bluetooth speaker with clear sound for home, travel and entertainment.",["Bluetooth wireless","Portable design","Rechargeable battery","Clear sound"]],
+["led01","NeonFlex RGB LED Strip 5M","Lighting",2499,["https://loremflickr.com/800/800/rgb,led,strip,lights?lock=90071","https://loremflickr.com/800/800/led,strip,room?lock=90072","https://loremflickr.com/800/800/rgb,led,bedroom?lock=90073","https://loremflickr.com/800/800/led,light,strip,roll?lock=90074"],"Flexible RGB LED strip for desks, bedrooms, gaming setups and décor.",["5 meter strip","RGB lighting","Remote control","Flexible adhesive design"]],
+["led02","GlowBar USB RGB LED Light","Lighting",1999,["https://loremflickr.com/800/800/rgb,led,light?lock=8271","https://loremflickr.com/800/800/rgb,led,light?lock=8272","https://loremflickr.com/800/800/rgb,led,light?lock=8273","https://loremflickr.com/800/800/rgb,led,light?lock=8274"],"Compact USB RGB light bar for gaming desks and ambient room lighting.",["USB powered","RGB modes","Desk friendly","Easy setup"]],
+["ctrl01","GamePad G1 Wireless Controller","Gaming",4499,["https://loremflickr.com/800/800/wireless,game,controller?lock=8281","https://loremflickr.com/800/800/wireless,game,controller?lock=8282","https://loremflickr.com/800/800/wireless,game,controller?lock=8283","https://loremflickr.com/800/800/wireless,game,controller?lock=8284"],"Responsive gaming controller designed for comfortable play and everyday gaming sessions.",["Dual analog sticks","Responsive buttons","Comfort grip","USB charging"]],
+["ctrl02","ProPlay X2 Gaming Controller","Gaming",5999,["https://loremflickr.com/800/800/gaming,controller?lock=8291","https://loremflickr.com/800/800/gaming,controller?lock=8292","https://loremflickr.com/800/800/gaming,controller?lock=8293","https://loremflickr.com/800/800/gaming,controller?lock=8294"],"Responsive gaming controller designed for comfortable play and everyday gaming sessions.",["Dual analog sticks","Responsive buttons","Comfort grip","USB charging"]],
+["ctrl03","TurboPad RGB Controller","Gaming",5299,["https://loremflickr.com/800/800/rgb,gaming,controller?lock=90081","https://loremflickr.com/800/800/led,game,controller?lock=90082","https://loremflickr.com/800/800/rgb,wireless,gamepad?lock=90083","https://loremflickr.com/800/800/gaming,controller,console?lock=90084"],"Responsive gaming controller designed for comfortable play and everyday gaming sessions.",["Dual analog sticks","Responsive buttons","Comfort grip","USB charging"]],
+["ctrl04","EliteGrip E5 Wireless Gamepad","Gaming",6999,["https://loremflickr.com/800/800/wireless,gamepad?lock=8311","https://loremflickr.com/800/800/wireless,gamepad?lock=8312","https://loremflickr.com/800/800/wireless,gamepad?lock=8313","https://loremflickr.com/800/800/wireless,gamepad?lock=8314"],"Responsive gaming controller designed for comfortable play and everyday gaming sessions.",["Dual analog sticks","Responsive buttons","Comfort grip","USB charging"]],
+["ctrl05","DualShock Style X9 Controller","Gaming",4799,["https://loremflickr.com/800/800/bluetooth,game,controller?lock=90101","https://loremflickr.com/800/800/gaming,controller,black?lock=90102","https://loremflickr.com/800/800/wireless,gamepad,console?lock=90103","https://loremflickr.com/800/800/gamepad,controller?lock=90104"],"Responsive gaming controller designed for comfortable play and everyday gaming sessions.",["Dual analog sticks","Responsive buttons","Comfort grip","USB charging"]],
+["ctrl06","ArcadePro A1 USB Controller","Gaming",2999,["https://loremflickr.com/800/800/gaming,gamepad,controller?lock=90111","https://loremflickr.com/800/800/ergonomic,gamepad?lock=90112","https://loremflickr.com/800/800/gaming,controller,pc?lock=90113","https://loremflickr.com/800/800/wireless,gaming,controller?lock=90114"],"Responsive gaming controller designed for comfortable play and everyday gaming sessions.",["Dual analog sticks","Responsive buttons","Comfort grip","USB charging"]],
+["ctrl07","BattlePad B7 Bluetooth Controller","Gaming",4999,["https://loremflickr.com/800/800/mini,wireless,controller?lock=90121","https://loremflickr.com/800/800/small,gamepad,controller?lock=90122","https://loremflickr.com/800/800/portable,gamepad?lock=90123","https://loremflickr.com/800/800/bluetooth,mini,gamepad?lock=90124"],"Responsive gaming controller designed for comfortable play and everyday gaming sessions.",["Dual analog sticks","Responsive buttons","Comfort grip","USB charging"]],
+["ctrl08","SpeedGrip S8 Gaming Gamepad","Gaming",5599,["https://loremflickr.com/800/800/gaming,gamepad?lock=8351","https://loremflickr.com/800/800/gaming,gamepad?lock=8352","https://loremflickr.com/800/800/gaming,gamepad?lock=8353","https://loremflickr.com/800/800/gaming,gamepad?lock=8354"],"Responsive gaming controller designed for comfortable play and everyday gaming sessions.",["Dual analog sticks","Responsive buttons","Comfort grip","USB charging"]],
+["ctrl09","TitanPad T10 Pro Controller","Gaming",7999,["https://loremflickr.com/800/800/pro,gaming,controller?lock=8361","https://loremflickr.com/800/800/pro,gaming,controller?lock=8362","https://loremflickr.com/800/800/pro,gaming,controller?lock=8363","https://loremflickr.com/800/800/pro,gaming,controller?lock=8364"],"Responsive gaming controller designed for comfortable play and everyday gaming sessions.",["Dual analog sticks","Responsive buttons","Comfort grip","USB charging"]],
+["ctrl10","MiniPlay M3 Wireless Controller","Gaming",3499,["https://loremflickr.com/800/800/mini,wireless,controller?lock=8371","https://loremflickr.com/800/800/mini,wireless,controller?lock=8372","https://loremflickr.com/800/800/mini,wireless,controller?lock=8373","https://loremflickr.com/800/800/mini,wireless,controller?lock=8374"],"Responsive gaming controller designed for comfortable play and everyday gaming sessions.",["Dual analog sticks","Responsive buttons","Comfort grip","USB charging"]],
+["sg01","SmartCharge 30W USB-C Adapter","Mobile",2499,["https://loremflickr.com/800/800/usb,c,charger?lock=8381","https://loremflickr.com/800/800/usb,c,charger?lock=8382","https://loremflickr.com/800/800/usb,c,charger?lock=8383","https://loremflickr.com/800/800/usb,c,charger?lock=8384"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg02","Type-C Fast Charging Cable 2M","Mobile",1299,["https://loremflickr.com/800/800/usb,c,cable?lock=8391","https://loremflickr.com/800/800/usb,c,cable?lock=8392","https://loremflickr.com/800/800/usb,c,cable?lock=8393","https://loremflickr.com/800/800/usb,c,cable?lock=8394"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg03","MagSafe Style Phone Stand","Mobile",2299,["https://loremflickr.com/800/800/magnetic,phone,stand?lock=8401","https://loremflickr.com/800/800/magnetic,phone,stand?lock=8402","https://loremflickr.com/800/800/magnetic,phone,stand?lock=8403","https://loremflickr.com/800/800/magnetic,phone,stand?lock=8404"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg04","Flexi Phone Tripod Stand","Mobile",1999,["https://loremflickr.com/800/800/phone,tripod?lock=8411","https://loremflickr.com/800/800/phone,tripod?lock=8412","https://loremflickr.com/800/800/phone,tripod?lock=8413","https://loremflickr.com/800/800/phone,tripod?lock=8414"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg05","Mini LED Selfie Ring Light","Mobile",1599,["https://loremflickr.com/800/800/selfie,ring,light?lock=8421","https://loremflickr.com/800/800/selfie,ring,light?lock=8422","https://loremflickr.com/800/800/selfie,ring,light?lock=8423","https://loremflickr.com/800/800/selfie,ring,light?lock=8424"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg06","SmartTag Bluetooth Tracker","Mobile",2799,["https://loremflickr.com/800/800/bluetooth,tracker?lock=8431","https://loremflickr.com/800/800/bluetooth,tracker?lock=8432","https://loremflickr.com/800/800/bluetooth,tracker?lock=8433","https://loremflickr.com/800/800/bluetooth,tracker?lock=8434"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg07","5-Port USB Hub Pro","Mobile",2499,["https://loremflickr.com/800/800/usb,hub?lock=8441","https://loremflickr.com/800/800/usb,hub?lock=8442","https://loremflickr.com/800/800/usb,hub?lock=8443","https://loremflickr.com/800/800/usb,hub?lock=8444"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg08","Wireless Charging Pad 15W","Mobile",2999,["https://loremflickr.com/800/800/wireless,charger?lock=8451","https://loremflickr.com/800/800/wireless,charger?lock=8452","https://loremflickr.com/800/800/wireless,charger?lock=8453","https://loremflickr.com/800/800/wireless,charger?lock=8454"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg09","Car Bluetooth FM Transmitter","Mobile",2199,["https://loremflickr.com/800/800/car,bluetooth,fm,transmitter?lock=90131","https://loremflickr.com/800/800/car,fm,transmitter?lock=90132","https://loremflickr.com/800/800/bluetooth,car,adapter?lock=90133","https://loremflickr.com/800/800/car,wireless,transmitter?lock=90134"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg10","Mobile Gaming Finger Sleeves","Mobile",799,["https://loremflickr.com/800/800/mobile,gaming,finger,sleeves?lock=90141","https://loremflickr.com/800/800/gaming,finger,sleeves?lock=90142","https://loremflickr.com/800/800/phone,gaming,accessories?lock=90143","https://loremflickr.com/800/800/mobile,game,finger?lock=90144"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg11","Desk Cable Organizer Kit","Mobile",899,["https://loremflickr.com/800/800/desk,cable,organizer?lock=90151","https://loremflickr.com/800/800/cable,management,desk?lock=90152","https://loremflickr.com/800/800/desk,cable,holder?lock=90153","https://loremflickr.com/800/800/wire,cable,organizer?lock=90154"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg12","Universal Phone Holder Stand","Mobile",1299,["https://loremflickr.com/800/800/smart,led,desk,clock?lock=90161","https://loremflickr.com/800/800/digital,led,desk,clock?lock=90162","https://loremflickr.com/800/800/rgb,desk,clock?lock=90163","https://loremflickr.com/800/800/smart,desk,clock?lock=90164"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]],
+["sg13","Smart LED Desk Clock","Mobile",2999,["https://loremflickr.com/800/800/smart,led,desk,clock?lock=8501","https://loremflickr.com/800/800/smart,led,desk,clock?lock=8502","https://loremflickr.com/800/800/smart,led,desk,clock?lock=8503","https://loremflickr.com/800/800/smart,led,desk,clock?lock=8504"],"Useful everyday tech accessory with a practical design for home, desk or mobile use.",["Compact design","Easy setup","Everyday use","Portable"]]
+);
 
 
 let filter="all";
@@ -6213,78 +5444,91 @@ function closeAboutPage(){
 
 <button id="backTop" aria-label="Back to top" title="Back to top">↑</button>
 
-
-<script>
-/* TYPE N BUY — final premium micro-interactions */
-(function(){
-  const header = document.querySelector('header');
-
-  function syncHeader(){
-    if(header) header.classList.toggle('is-scrolled', window.scrollY > 8);
-  }
-  window.addEventListener('scroll', syncHeader, {passive:true});
-  syncHeader();
-
-  // Add a subtle tilt only on capable pointer devices.
-  if(window.matchMedia && window.matchMedia('(pointer:fine)').matches){
-    document.addEventListener('pointermove', function(e){
-      const card = e.target.closest('.card');
-      if(!card || card.dataset.tiltLocked === '1') return;
-      const r = card.getBoundingClientRect();
-      if(r.width < 1 || r.height < 1) return;
-      const x = ((e.clientX-r.left)/r.width-.5)*2;
-      const y = ((e.clientY-r.top)/r.height-.5)*2;
-      card.style.setProperty('--mx', (x*2.2).toFixed(2)+'deg');
-      card.style.setProperty('--my', (y*-2.2).toFixed(2)+'deg');
-    }, {passive:true});
-
-    document.addEventListener('pointerout', function(e){
-      const card = e.target.closest('.card');
-      if(card && !card.contains(e.relatedTarget)){
-        card.style.removeProperty('--mx');
-        card.style.removeProperty('--my');
-      }
-    }, {passive:true});
-  }
-
-  const style = document.createElement('style');
-  style.textContent = `
-    @media (pointer:fine){
-      .card:hover{
-        transform:translateY(-6px) rotateX(var(--my,0deg)) rotateY(var(--mx,0deg));
-      }
-    }
-  `;
-  document.head.appendChild(style);
-})();
-</script>
-
-
-<script id="daraz-marketplace-js">
-(() => {
-  const root = document.documentElement;
-
-  // Give the page the familiar marketplace spacing without changing existing logic.
-  const applyMarketplaceClasses = () => {
-    document.querySelectorAll('input[type="search"]').forEach(el => {
-      el.classList.add('market-search-input');
-    });
-  };
-
-  // Make existing product cards feel like a real marketplace grid.
-  const observe = new MutationObserver(() => applyMarketplaceClasses());
-  observe.observe(document.body, {childList:true, subtree:true});
-  applyMarketplaceClasses();
-
-  // Header elevation on scroll.
-  const headers = document.querySelectorAll('header,.header,.site-header,.navbar');
-  const onScroll = () => {
-    headers.forEach(h => h.classList.toggle('scrolled', window.scrollY > 8));
-  };
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-})();
-</script>
-
 </body>
-</html>
+</html><style>
+/* ===== TYPE N BUY FINAL PRODUCT DETAIL POLISH ===== */
+/* Orange quantity controls to match the store theme */
+.qtyBox{border-color:#ff5a00 !important}
+.qtyBox button{background:#ff5a00 !important;color:#fff !important}
+.qtyBox button:hover{background:#e84d00 !important}
+.qtyBox span{color:#222 !important}
+
+/* Orange flash-sale bar */
+.saleTimer{
+  background:#ff5a00 !important;
+  color:#fff !important;
+  border:1px solid #ff5a00 !important;
+}
+.saleTimer strong,.saleTimer b,.saleTimer small{color:#fff !important}
+
+/* Product thumbnails: vertical column on the LEFT, like the reference */
+@media(min-width:901px){
+  .productGalleryPanel{
+    display:grid !important;
+    grid-template-columns:82px minmax(0,1fr) !important;
+    grid-template-rows:minmax(0,510px) auto !important;
+    grid-template-areas:
+      "thumbs stage"
+      "counter counter" !important;
+    column-gap:14px !important;
+    align-items:start !important;
+    padding:10px 28px 30px 0 !important;
+  }
+  .productGalleryPanel .productImageStage{
+    grid-area:stage !important;
+    width:100% !important;
+    height:510px !important;
+  }
+  .productGalleryPanel .gallery{
+    grid-area:thumbs !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:9px !important;
+    width:82px !important;
+    height:510px !important;
+    margin:0 !important;
+    padding:0 2px !important;
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
+    scrollbar-width:thin !important;
+  }
+  .productGalleryPanel .thumb{
+    width:76px !important;
+    height:76px !important;
+    min-width:76px !important;
+    min-height:76px !important;
+    flex:0 0 76px !important;
+    padding:4px !important;
+    background:#fff !important;
+    border:1px solid #ddd !important;
+    border-radius:5px !important;
+  }
+  .productGalleryPanel .thumb.active{
+    border:2px solid #ff5a00 !important;
+    box-shadow:0 0 0 1px rgba(255,90,0,.12) !important;
+  }
+  .productGalleryPanel .thumb img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    display:block !important;
+  }
+  .productGalleryPanel .counter{
+    grid-area:counter !important;
+    width:100% !important;
+    margin-top:6px !important;
+  }
+}
+
+@media(max-width:900px){
+  .productGalleryPanel .gallery{
+    display:flex !important;
+    flex-direction:row !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    width:100% !important;
+    height:auto !important;
+  }
+}
+</style>
